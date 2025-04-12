@@ -5,9 +5,18 @@ This guide will help you set up ePOW mining for Eclipse $BITZ tokens on Ubuntu i
 ## What You'll Need
 
 - Ubuntu Linux system
+  Get a sever or VPS from Contabo - https://my.contabo.com/
+
+  Get 4 vCPU Cores , costs about 5$ a month and should be good for our use-case.
+  
+  <img width="1226" alt="Screenshot 2025-04-12 at 11 22 35 AM" src="https://github.com/user-attachments/assets/7871f5f6-263d-4068-b910-c3385fc774ed" />
+
 - Terminal access
+  Get Terminus for connect to the above server.
 - 0.005 ETH on Eclipse network for gas fees
+  Backpack Wallet if you have not installed it yet. 
 - About 15 minutes of setup time
+
 
 ## Step 1: Install Rust Programming Language
 Open your terminal and enter:
