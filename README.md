@@ -12,9 +12,28 @@ This guide will help you set up ePOW mining for Eclipse $BITZ tokens on Ubuntu i
   <img width="1226" alt="Screenshot 2025-04-12 at 11 22 35 AM" src="https://github.com/user-attachments/assets/7871f5f6-263d-4068-b910-c3385fc774ed" />
 
 - Terminal access
-  Get Terminus for connect to the above server.
+  Get Terminus for connect to the above server - https://termius.com/download/macos
+
+- Connect to VPS server
+
+
+  Get IP or Hostname of VPS, which you should you be able to get from the below screen from your Contabo account - My Services
+
+  ![image](https://github.com/user-attachments/assets/f3fd65ed-bbae-4a54-965e-a96887feeafa)
+
+  
+  Open Terminus -->New Host --> Copy IP address and login credentials that you setup when creating the server -- >Connect
+  
+  ![image](https://github.com/user-attachments/assets/b22d6820-c51c-48a6-9590-028e4175930b)
+
+
+Note: you need to connect to your server before proceeding. So get to this step sucessfully before moving to the next step.
+  
 - 0.005 ETH on Eclipse network for gas fees
-  Backpack Wallet if you have not installed it yet. 
+  
+  Backpack Wallet if you have not installed it yet - https://backpack.app/ and user referral code '0XFARMED'
+  Create a Eclipse Wallet and bridge funds from EVM or Solana - relay.link/bridge/ethereum/?fromChainId=10
+  
 - About 15 minutes of setup time
 
 
