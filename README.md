@@ -84,16 +84,26 @@ cargo install bitz
 This downloads and installs the mining program.
 
 ## Step 7: Connect to Eclipse Network
-Choose ONE of these networks (the first is recommended):
+Choose to the RPC (this might need to be changed based on the load):
 ```bash
 solana config set --url https://mainnetbeta-rpc.eclipse.xyz/
 ```
 
-## Step 8: Start Mining in a Background Session
+## Step 8: Install Screen
+Screen is a terminal multiplexer that allows you to run processes in the background even after you disconnect from your server. This is essential for mining, as it needs to run continuously.
+
+Install Screen with:
+```bash
+sudo apt install screen -y
+```
+
+## Step 9: Start Mining in a Background Session
 Create a persistent session that continues running even if you close your terminal:
 ```bash
 screen -S eclipse
 ```
+
+> 💡 **What is Screen?** Screen creates virtual terminal sessions that keep running even if you close your SSH connection or terminal window. This is perfect for mining as it allows the process to continue 24/7 without requiring you to stay logged in.
 Then start mining:
 ```bash
 bitz collect
