@@ -32,6 +32,7 @@ Note: you need to connect to your server before proceeding. So get to this step 
 - 0.005 ETH on Eclipse network for gas fees
   
   Backpack Wallet if you have not installed it yet - https://backpack.app/ and user referral code '0XFARMED'
+  
   Create a Eclipse Wallet and bridge funds from EVM or Solana - relay.link/bridge/ethereum/?fromChainId=10
   
 - About 15 minutes of setup time
@@ -148,7 +149,8 @@ View the keypair (this shows your private key):
 cat /path/shown/in/previous/command
 ```
 
-Copy the array of numbers and import them in Backpack's private key section.
+Copy the array of numbers and import them in Backpack's private key section - Copy the all the numbers including '[]' and then open wallet -->import private key --> paste and save.
+Verify the Wallet address that shows in backpack wallet and Publick key Step 5 are the same. Then transfer 0.005 ETH into this new wallets before starting mining.
 
 ## Need Help?
 
@@ -158,3 +160,9 @@ Check the #powpow channel for community support
 ---
 
 This guide was inspired by ArshiaXBT (https://x.com/ArshiaXBT)
+
+I Just added some more context for non-techincal folks
+
+Follow me or DM if you have any quesitons or trouble setting things up.
+
+https://x.com/0xfarmed
