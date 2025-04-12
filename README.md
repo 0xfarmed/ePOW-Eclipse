@@ -1,84 +1,109 @@
-# ePOW, Eclipse $BITZ Setup Guide on Ubuntu 💚
+# 🚀 Beginner-Friendly Guide to Mining $BITZ on Eclipse (Ubuntu)
 
+This guide will help you set up ePOW mining for Eclipse $BITZ tokens on Ubuntu in simple steps.
 
-1. Install Rust
-```bash 
+## What You'll Need
+
+- Ubuntu Linux system
+- Terminal access
+- 0.005 ETH on Eclipse network for gas fees
+- About 15 minutes of setup time
+
+## Step 1: Install Rust Programming Language
+Open your terminal and enter:
+```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-2. Follow the prompts. Once installed, run:
+- Choose option "1) Proceed with installation" when prompted
+- After installation completes, load Rust into your current session:
 ```bash
 source $HOME/.cargo/env
 ```
-3. Install Solana CLI
-```bash 
+
+## Step 2: Install Solana Command-Line Tools
+```bash
 curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev | bash
 ```
-4. Create a Wallet (Keypair)
+This installs the Solana tools you'll need to interact with the blockchain.
+
+## Step 3: Create Your Wallet
 ```bash
 solana-keygen new
 ```
-Set Passphrase for better security or just skip (click enter)
+- You'll be asked if you want a passphrase (recommended for security)
+- If you prefer simplicity, just press Enter to skip setting a passphrase
+- The system creates your wallet at: `~/.config/solana/id.json`
 
-This will create a new keypair at the default path: ```~/.config/solana/id.json```
+⚠️ **IMPORTANT:** Write down your seed phrase (recovery words) and public key. These appear on screen after creation and are needed to access your funds!
 
-Save your public key & mnemonic — it will be shown after creation.
-<br><br>
-<br><br>
-5. Install Bitz CLI
+## Step 4: Install the BITZ Mining Software
 ```bash
 cargo install bitz
 ```
-6. Change RPC
+This downloads and installs the mining program.
+
+## Step 5: Connect to Eclipse Network
+Choose ONE of these networks (the first is recommended):
 ```bash
 solana config set --url https://mainnetbeta-rpc.eclipse.xyz/
 ```
-   or
-```bash
-solana config set --url https://eclipse.helius-rpc.com/
-```
-   or
-```bash
-solana config set --url https://bitz-000.eclipserpc.xyz/
-```
-7. Open Screen
+
+## Step 6: Start Mining in a Background Session
+Create a persistent session that continues running even if you close your terminal:
 ```bash
 screen -S eclipse
 ```
-8. Start eMining
+Then start mining:
 ```bash
 bitz collect
 ```
-- You need 0.005 $ETH on Eclipse to start mining, so send $ETH to your public key
-- Detach from screen with CTRL + A + D
-- Go back to screen with ```screen -r eclipse```
-<br><br>
-<br><br>
-Other Commands:
 
-  •	Claim your Bitz:
-```bitz claim```
-  
-  •	Check your balance:
-```bitz account```
+> 🔴 **NOTE:** You need to have 0.005 ETH on Eclipse network in your wallet before mining works. Transfer some ETH to the public key address you created earlier.
 
-  • Config CPU (change the number to change cores):
-```bitz collect --cores 8```
-  
-  •	View all commands:
-```bitz -h```
-<br><br>
-<br><br>
-Import to backpack:
+To exit this screen while leaving mining running: press `Ctrl + A`, then press `D`
+To return to your mining screen later: `screen -r eclipse`
+
+## Useful Commands
+
+Check your mined tokens:
+```bash
+bitz account
+```
+
+Claim your tokens:
+```bash
+bitz claim
+```
+
+Adjust how many CPU cores to use (example uses 8):
+```bash
+bitz collect --cores 8
+```
+
+See all available commands:
+```bash
+bitz -h
+```
+
+## Importing Your Wallet to Backpack
+
+Get your keypair path:
 ```bash
 solana config get
 ```
-copy path of Keypair path 
+
+View the keypair (this shows your private key):
 ```bash
-cat <Keypair path>
+cat /path/shown/in/previous/command
 ```
-Copy array of number and import them on backpack in private key section
-<br><br>
-<br><br>
-**For help check #powpow channel on Eclipse discord: https://discord.gg/eclipse-fnd**
-<br><br>
-**My X: https://x.com/ArshiaXBT**
+
+Copy the array of numbers and import them in Backpack's private key section.
+
+## Need Help?
+
+Join the Eclipse Discord: https://discord.gg/eclipse-fnd
+Check the #powpow channel for community support
+
+---
+
+This guide was inspired by ArshiaXBT (https://x.com/ArshiaXBT)
