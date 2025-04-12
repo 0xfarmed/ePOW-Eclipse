@@ -36,8 +36,14 @@ Note: you need to connect to your server before proceeding. So get to this step 
   
 - About 15 minutes of setup time
 
+## Step 1: Update Your Ubuntu System
+First, make sure your system is up to date:
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+This ensures you have the latest security updates and packages.
 
-## Step 1: Install Rust Programming Language
+## Step 2: Install Rust Programming Language
 Open your terminal and enter:
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -48,13 +54,20 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 ```
 
-## Step 2: Install Solana Command-Line Tools
+## Step 3: Install Solana Command-Line Tools
 ```bash
 curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev | bash
 ```
 This installs the Solana tools you'll need to interact with the blockchain.
 
-## Step 3: Create Your Wallet
+## Step 4: Reboot Your System
+It's good practice to reboot after installing the Solana CLI:
+```bash
+sudo reboot
+```
+Wait for your system to restart, then log back in.
+
+## Step 5: Create Your Wallet
 ```bash
 solana-keygen new
 ```
@@ -64,19 +77,19 @@ solana-keygen new
 
 ⚠️ **IMPORTANT:** Write down your seed phrase (recovery words) and public key. These appear on screen after creation and are needed to access your funds!
 
-## Step 4: Install the BITZ Mining Software
+## Step 6: Install the BITZ Mining Software
 ```bash
 cargo install bitz
 ```
 This downloads and installs the mining program.
 
-## Step 5: Connect to Eclipse Network
+## Step 7: Connect to Eclipse Network
 Choose ONE of these networks (the first is recommended):
 ```bash
 solana config set --url https://mainnetbeta-rpc.eclipse.xyz/
 ```
 
-## Step 6: Start Mining in a Background Session
+## Step 8: Start Mining in a Background Session
 Create a persistent session that continues running even if you close your terminal:
 ```bash
 screen -S eclipse
